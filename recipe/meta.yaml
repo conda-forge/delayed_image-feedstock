@@ -1,5 +1,5 @@
 {% set name = "delayed_image" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/delayed_image-{{ version }}.tar.gz
-  sha256: 3df6b59129c13a79b2b67b6fda358c26a48139002b1bfb2b76bcd805b2b6b255
+  sha256: 369a76b82161f60545734b048231672148b38307f0a9abc9734da8a2725be447
 
 build:
   noarch: python
