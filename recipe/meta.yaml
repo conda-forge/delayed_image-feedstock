@@ -12,15 +12,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >3.8
+    - python {{ python_min }}
     - setuptools >=41.0.1
   run:
-    - python >3.8
+    - python >={{ python_min }}
     - kwarray >=0.6.19
     - kwimage >=0.10.1
     - networkx >=2.7
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Kitware/delayed_image
